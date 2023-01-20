@@ -127,9 +127,9 @@ def newscr(clear=20):
 def turnout(stage, msg, tts):
     #stage = 0 # Uncomment for Testing !!!!!
     #FIRESDR Smart Paging (Application)
-    app = Application('a37fksysrfhmnuaczz58qaxqj4qb4o')
+    app = Application('INSERT APPLICATION KEY HERE')
     #FIRESDR Smart Paging Members (Delivery Group)
-    user = app.get_user('g89nanv98y2znbrt2xn2i8zpitv4ay')
+    user = app.get_user('INSERT USER KEY HERE')
     if stage != 0:
         if stage == 1:
             call(["aplay","/home/pi/FIRESDR/tone.wav"])
@@ -142,9 +142,9 @@ def turnout(stage, msg, tts):
             call(["aplay", "/home/pi/FIRESDR/tone.wav"])
         if stage == 4:
             #call(["aplay", "/home/pi/FIRESDR/atone.wav"])
-            app = Application('aky9uwfvxy8z44seg5c7tz46h4e77m')
+            app = Application('INSERT APPLICATION KEY HERE')
             #AMBOSDR Smart Paging Members (Delivery Group)
-            user = app.get_user('gecot6dnrn51xbdiuws6q3y6wex3of')
+            user = app.get_user('INSERT USER KEY HERE')
             message = user.send_message(msg,priority=0) #*************************** Comment both lines for Testing Ensure is Reset ***************************
             response = (message.is_sent, message.id, str(message.sent_at))
         else:
@@ -154,9 +154,9 @@ def turnout(stage, msg, tts):
             engine.runAndWait() # and Here
     if boxfound:
         #FIRESDR Smart Paging (Application)
-        app = Application('a37fksysrfhmnuaczz58qaxqj4qb4o')
+        app = Application('INSERT APPLICATION KEY HERE')
         #FIRESDR Smart Paging Members (Delivery Group)
-        user = app.get_user('g89nanv98y2znbrt2xn2i8zpitv4ay')
+        user = app.get_user('INSERT USER KEY HERE')
         message = user.send_message(box,priority=1) #*************************** Comment both lines for Testing Ensure is Reset ***************************
         response = (message.is_sent, message.id, str(message.sent_at))
 def main():
